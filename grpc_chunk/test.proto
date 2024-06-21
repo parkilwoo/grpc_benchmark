@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+service TestService {
+    rpc SendFile (stream FileRequest) returns (stream FileResponse);
+}
+
+message FileRequest {
+    bytes file_content = 1;
+}
+message FileResponse {
+    string base64_data = 1;
+}
