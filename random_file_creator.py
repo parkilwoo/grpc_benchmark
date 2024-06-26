@@ -2,8 +2,9 @@ import os
 
 def create_random_file(filename, size_in_mb):
     size_in_bytes = size_in_mb * 1024 * 1024  # MB to Bytes
+    os.makedirs('test_sample', exist_ok=True)
     random_data = os.urandom(size_in_bytes)
-    with open(filename, 'wb') as file:
+    with open(f'test_sample/{filename}', 'wb') as file:
         file.write(random_data)
 
 # 파일 생성

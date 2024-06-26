@@ -11,8 +11,8 @@ class TestServiceServicer(test_pb2_grpc.TestServiceServicer):
         encoded_data = base64.b64encode(file_content)
         return test_pb2.FileResponse(base64_data=encoded_data)
 
-def serve():
-        server = grpc.server(futures.ThreadPoolExecutor(max_workers=10),
+def serve(worker: int):
+        server = grpc.server(futures.ThreadPoolExecutor(max_workers=worker),
                             options=[('grpc.max_receive_message_length', 150 * 1024 * 1024),
                                     ('grpc.max_send_message_length', 150 * 1024 * 1024)])
         test_pb2_grpc.add_TestServiceServicer_to_server(TestServiceServicer(), server)
@@ -22,4 +22,9 @@ def serve():
         server.wait_for_termination()
 
 if __name__ == '__main__':
-    serve()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--worker", type=int, required=True)
+
+    args = parser.parse_args()
+    serve(args.worker)

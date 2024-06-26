@@ -1,0 +1,20 @@
+../test_sample/random_10MB.bin 단일 쓰레드 요청 시작
+../test_sample/random_10MB.bin 단일 쓰레드 요청 소요 시간: 0.22초
+../test_sample/random_10MB.bin 10개 쓰레드 동시 요청 시작
+../test_sample/random_10MB.bin 10개 쓰레드 동시 요청 소요 시간: 1.67초
+
+../test_sample/random_30MB.bin 단일 쓰레드 요청 시작
+../test_sample/random_30MB.bin 단일 쓰레드 요청 소요 시간: 0.61초
+../test_sample/random_30MB.bin 10개 쓰레드 동시 요청 시작
+../test_sample/random_30MB.bin 10개 쓰레드 동시 요청 소요 시간: 5.61초
+
+../test_sample/random_50MB.bin 단일 쓰레드 요청 시작
+../test_sample/random_50MB.bin 단일 쓰레드 요청 소요 시간: 1.02초
+../test_sample/random_50MB.bin 10개 쓰레드 동시 요청 시작
+../test_sample/random_50MB.bin 10개 쓰레드 동시 요청 소요 시간: 8.97초
+
+../test_sample/random_100MB.bin 단일 쓰레드 요청 시작
+../test_sample/random_100MB.bin 단일 쓰레드 요청 소요 시간: 2.00초
+../test_sample/random_100MB.bin 10개 쓰레드 동시 요청 시작
+../test_sample/random_100MB.bin 10개 쓰레드 동시 요청 소요 시간: 18.31초
+

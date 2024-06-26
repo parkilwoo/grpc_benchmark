@@ -27,7 +27,10 @@ def test_file_request(file_path):
         for future in futures:
             future.result()
     multi_thread_end = time.time()
-    print(f"{file_path} 10개 쓰레드 동시 요청 소요 시간: {multi_thread_end - multi_thread_start:.2f}초")
+    print(f"{file_path} 10개 쓰레드 동시 요청 소요 시간: {multi_thread_end - multi_thread_start:.2f}초\n")
 
 if __name__ == '__main__':
-    test_file_request("../random_100MB.bin")
+    test_file_request("../test_sample/random_10MB.bin")
+    test_file_request("../test_sample/random_30MB.bin")
+    test_file_request("../test_sample/random_50MB.bin")
+    test_file_request("../test_sample/random_100MB.bin")
